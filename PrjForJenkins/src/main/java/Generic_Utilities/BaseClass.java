@@ -56,7 +56,7 @@ public class BaseClass {
 		
 		String url=System.getProperty("URL");
 		driver.get(url);
-		
+		System.out.println("Before Method Continuing");	
 //		String UNAME=System.getProperty("uname");
 //		String PASS=System.getProperty("pwd");
 //		
