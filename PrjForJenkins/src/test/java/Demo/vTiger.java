@@ -11,7 +11,7 @@ import Generic_Utilities.BaseClass;
 
 //import Generic_Utilities.BaseClass;
 
-public class vTiger extends BaseClass
+public class vTiger // extends BaseClass
 {
 @Test
 	public void method()
@@ -19,10 +19,12 @@ public class vTiger extends BaseClass
 
 		System.out.println("vTiger for Jenkins Running.............");
 //		
-//		WebDriver driver=new ChromeDriver();
-//		driver.manage().window().maximize();
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 //		
+		String url=System.getProperty("URL");
+		driver.get(url);
 //		driver.get("http://localhost:8888/");
 	}
 

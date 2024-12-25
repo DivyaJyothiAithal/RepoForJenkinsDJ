@@ -46,17 +46,17 @@ public class BaseClass {
 //	}
 //	
 //	
-	@BeforeMethod
-	public void BefMethod()throws Throwable
-	{
-		WebDriver driver=new ChromeDriver();
-		System.out.println("Before Method started");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		
-		String url=System.getProperty("URL");
-		driver.get(url);
-		System.out.println("Before Method Continuing");	
+//	@BeforeMethod
+//	public void BefMethod()throws Throwable
+//	{
+//		WebDriver driver=new ChromeDriver();
+//		System.out.println("Before Method started");
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//		
+//		String url=System.getProperty("URL");
+//		driver.get(url);
+//		System.out.println("Before Method Continuing");	
 //		String UNAME=System.getProperty("uname");
 //		String PASS=System.getProperty("pwd");
 //		
@@ -66,7 +66,7 @@ public class BaseClass {
 //		driver.findElement(By.name("user_password")).sendKeys(PASS);
 //		driver.findElement(By.id("submitButton")).click();
 //
-}
+//}
 //
 //	@AfterMethod
 //	public void AftMethod()
