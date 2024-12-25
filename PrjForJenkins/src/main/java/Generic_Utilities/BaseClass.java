@@ -4,7 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -46,18 +46,19 @@ public class BaseClass {
 //	}
 //	
 //	
-//	@BeforeMethod
-//	public void BefMethod()throws Throwable
-//	{
-//
-//		System.out.println("Before Method started");
-//		driver.manage().window().maximize();
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-//		
-//		driver.get("http://localhost:8888/");
-//		
-////		String UNAME=System.getProperty("uname");
-////		String PASS=System.getProperty("pwd");
+	@BeforeMethod
+	public void BefMethod()throws Throwable
+	{
+		WebDriver driver=new ChromeDriver();
+		System.out.println("Before Method started");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		
+		String url=System.getProperty("URL");
+		driver.get(url);
+		
+//		String UNAME=System.getProperty("uname");
+//		String PASS=System.getProperty("pwd");
 //		
 //		String UNAME="admin";
 //		String PASS="admin";
@@ -65,7 +66,7 @@ public class BaseClass {
 //		driver.findElement(By.name("user_password")).sendKeys(PASS);
 //		driver.findElement(By.id("submitButton")).click();
 //
-//	}
+}
 //
 //	@AfterMethod
 //	public void AftMethod()
