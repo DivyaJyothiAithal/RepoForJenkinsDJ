@@ -23,9 +23,9 @@ public class vTiger // extends BaseClass
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 //		
-		String url=System.getProperty("URL");
-		driver.get(url);
-//		driver.get("http://localhost:8888/");
+		//String url=System.getProperty("URL");
+		//driver.get(url);
+	driver.get("http://localhost:8888/");
 	}
 
 	
